@@ -23,4 +23,10 @@ const route = useRoute();
   padding-top: 20px;
   padding-bottom: 40px;
 }
+
+@media (max-width: 1219px) {
+  .container {
+    width: 100vw;
+  }
+}
 </style>
