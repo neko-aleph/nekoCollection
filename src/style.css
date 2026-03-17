@@ -1,0 +1,43 @@
+:root {
+  --font-sans: Geist;
+  --font-jp: "LINE Seed JP";
+
+  color-scheme: light dark;
+
+  --bg0: #f0f0f0;
+  --bg1: #e7e7e7;
+  --bg2: #cacaca;
+  --bd0: #bfbfbf;
+  --fg0: #262626;
+  --wv0: #f0f0f0;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background: var(--bg0);
+  color: var(--fg0);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg0: #191919;
+    --bg1: #262626;
+    --bg2: #393939;
+    --bd0: #4c4c4c;
+    --fg0: #e7e7e7;
+    --wv0: #393939;
+  }
+}
+
+body {
+  font-family: var(--font-sans), var(--font-jp), sans-serif;
+  line-height: 16px;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.vds-captions {
+  --media-cue-border-radius: 8px !important;
+}
