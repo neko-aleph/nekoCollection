@@ -10,6 +10,7 @@
   font-size: 12px;
   height: 32px;
   background: var(--bg0);
+  color: var(--fg0);
   border: 1px solid var(--bd0);
   border-radius: 8px;
   box-sizing: border-box;
