@@ -112,7 +112,6 @@ const filteredRecommendations = computed(() =>
   display: flex;
   flex-direction: row;
   gap: 20px;
-  align-items: center;
 }
 
 .column {
@@ -152,6 +151,7 @@ const filteredRecommendations = computed(() =>
   .content {
     flex-direction: column;
     width: 100vw;
+    align-items: center;
   }
 
   .column {
