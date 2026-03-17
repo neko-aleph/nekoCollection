@@ -26,6 +26,7 @@ import logoUrl from "../assets/logo.svg";
 img {
   height: 32px;
   width: 32px;
+  border-radius: 4px;
 }
 
 span {
