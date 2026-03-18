@@ -32,11 +32,16 @@ h1 {
   line-height: 32px;
 }
 
-@media (max-width: 1219px) {
+@media (max-width: 1239px) {
   h1 {
     width: 100%;
     max-width: 400px;
     text-align: center;
+  }
+
+  .small {
+    font-size: 16px;
+    line-height: 20px;
   }
 }
 </style>

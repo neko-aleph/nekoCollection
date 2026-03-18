@@ -141,4 +141,24 @@ onMounted(() => {
   outline: 1px solid var(--bd0);
   flex: 0 0 auto;
 }
+
+.selected-option {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.option-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+@media (max-width: 1239px) {
+  .options {
+    top: 39px;
+  }
+}
 </style>

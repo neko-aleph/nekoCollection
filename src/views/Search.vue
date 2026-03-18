@@ -57,9 +57,9 @@ useIntersectionObserver(sentinel, async ([entry]) => {
   height: 10px;
 }
 
-@media (max-width: 1219px) {
+@media (max-width: 1239px) {
   .search-results {
-    width: calc(100vw - 20px);
+    width: min(calc(100vw - 40px), 400px);
     flex-direction: column;
     gap: 5px;
     flex-wrap: nowrap;

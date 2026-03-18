@@ -24,4 +24,11 @@
 .base-button:active {
   background: var(--bg2);
 }
+
+@media (max-width: 1239px) {
+  .base-button {
+    font-size: 16px;
+    height: 40px;
+  }
+}
 </style>

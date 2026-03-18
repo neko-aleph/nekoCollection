@@ -147,7 +147,7 @@ const filteredRecommendations = computed(() =>
   flex-wrap: wrap;
 }
 
-@media (max-width: 1219px) {
+@media (max-width: 1239px) {
   .content {
     flex-direction: column;
     width: 100vw;
@@ -162,6 +162,7 @@ const filteredRecommendations = computed(() =>
     flex-direction: column;
     align-items: center;
     gap: 0;
+    width: min(calc(100vw - 40px), 400px);
   }
 
   .title-info {
@@ -169,12 +170,13 @@ const filteredRecommendations = computed(() =>
   }
 
   .chapter-source {
+    margin-top: 10px;
     position: static;
     width: 100%;
   }
 
   .external-links {
-    width: min(calc(100vw - 20px), 400px);
+    width: min(calc(100vw - 40px), 400px);
     flex-direction: column;
     flex-wrap: nowrap;
   }

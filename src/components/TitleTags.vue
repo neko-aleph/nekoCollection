@@ -30,9 +30,9 @@ defineProps<{
   gap: 5px;
 }
 
-@media (max-width: 1219px) {
+@media (max-width: 1239px) {
   .title-tags {
-    width: min(calc(100vw - 20px), 400px);
+    width: min(calc(100vw - 40px), 400px);
   }
 }
 </style>

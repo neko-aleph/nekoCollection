@@ -38,9 +38,14 @@ img {
   left: 5px;
 }
 
-@media (max-width: 1219px) {
+@media (max-width: 1239px) {
   .link-button {
     width: 100%;
+  }
+
+  img {
+    width: 28px;
+    height: 28px;
   }
 }
 </style>

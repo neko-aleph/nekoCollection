@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useMediaQuery } from "@vueuse/core";
+import { useMobile } from "../composables/useMobile.ts";
 
-const isMobile = useMediaQuery("(max-width: 1219px)");
+const isMobile = useMobile();
 </script>
 
 <template>
@@ -39,7 +39,7 @@ const isMobile = useMediaQuery("(max-width: 1219px)");
   align-items: flex-end;
 }
 
-@media (max-width: 1219px) {
+@media (max-width: 1239px) {
   .home {
     width: 100vw;
   }

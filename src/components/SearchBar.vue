@@ -88,15 +88,20 @@ input:focus {
   top: 6px;
 }
 
-@media (max-width: 1219px) {
+@media (max-width: 1239px) {
   input {
-    width: calc(100vw - 101px);
-    max-width: 319px;
+    font-size: 16px;
+    width: min(calc(100vw - 134px), 306px);
+    height: 40px;
   }
 
   .wrapper {
-    width: calc(100vw - 101px);
-    max-width: 319px;
+    width: min(calc(100vw - 134px), 306px);
+    height: 40px;
+  }
+
+  .icon {
+    display: none;
   }
 }
 </style>

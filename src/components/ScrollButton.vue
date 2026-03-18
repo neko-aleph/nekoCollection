@@ -23,4 +23,11 @@ defineProps<{
   box-sizing: border-box;
   font-size: 20px;
 }
+
+@media (max-width: 1239px) {
+  .scroll-button {
+    height: 40px;
+    width: 40px;
+  }
+}
 </style>

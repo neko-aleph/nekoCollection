@@ -57,10 +57,10 @@ defineProps<{
   word-break: break-word;
 }
 
-@media (max-width: 1219px) {
+@media (max-width: 1239px) {
   .search-result {
-    height: 52px;
-    width: calc(100vw - 20px);
+    height: 70px;
+    width: calc(100vw - 40px);
     max-width: 400px;
     gap: 10px;
     flex-direction: row;
@@ -79,8 +79,9 @@ defineProps<{
   }
 
   .title-cover {
-    height: 52px;
-    width: 36px;
+    height: 70px;
+    width: 48px;
+    flex-shrink: 0;
     border-radius: 8px 0 0 8px;
     box-sizing: border-box;
   }

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
+import { useMobile } from "../composables/useMobile.ts";
 import type { TitleChapter } from "../types/title.ts";
 import BaseSelect from "./BaseSelect.vue";
 import ScrollButton from "./ScrollButton.vue";
@@ -13,6 +14,7 @@ const props = defineProps<{
 
 const route = useRoute();
 const router = useRouter();
+const isMobile = useMobile();
 
 function chapterName(chapter: TitleChapter | undefined) {
   if (chapter === undefined) return "Unknown";
@@ -47,7 +49,7 @@ const currentChapter = computed(() => {
 </script>
 
 <template>
-  <div class="chapter-select-container">
+  <div class="chapter-select-container" v-if="!isMobile">
     <BaseSelect
       :items="chapters.map((chapter) => chapterName(chapter))"
       mode="index"
@@ -62,6 +64,17 @@ const currentChapter = computed(() => {
         @click="pushChapter(currentChapter + 1)"
       />
     </div>
+  </div>
+  <div class="chapter-select-container-small" v-else>
+    <ScrollButton direction="left" @click="pushChapter(currentChapter - 1)" />
+    <BaseSelect
+      :items="chapters.map((chapter) => chapterName(chapter))"
+      mode="index"
+      class="chapter-select"
+      :default="currentChapter"
+      v-model="modelValue"
+    />
+    <ScrollButton direction="right" @click="pushChapter(currentChapter + 1)" />
   </div>
 </template>
 
@@ -83,9 +96,16 @@ const currentChapter = computed(() => {
   gap: 5px;
 }
 
-@media (max-width: 1219px) {
-  .chapter-select-container .chapter-select {
-    width: min(calc(100vw - 20px), 400px);
+.chapter-select-container-small {
+  width: min(calc(100vw - 40px), 400px);
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+@media (max-width: 1239px) {
+  .chapter-select {
+    width: min(calc(100vw - 130px), 400px);
   }
 }
 </style>

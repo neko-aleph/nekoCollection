@@ -16,16 +16,17 @@ const route = useRoute();
 
 <style scoped>
 .container {
-  min-height: calc(100vh - 212px);
+  min-height: calc(100vh - 192px);
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 
-@media (max-width: 1219px) {
+@media (max-width: 1239px) {
   .container {
+    min-height: calc(100vh - 230px);
     width: 100vw;
   }
 }

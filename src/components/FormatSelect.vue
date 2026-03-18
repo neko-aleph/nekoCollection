@@ -26,4 +26,10 @@ watch(
 .format-select {
   width: 76px;
 }
+
+@media (max-width: 1239px) {
+  .format-select {
+    width: 89px;
+  }
+}
 </style>

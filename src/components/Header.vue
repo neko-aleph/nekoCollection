@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { useMediaQuery } from "@vueuse/core";
 import { ref } from "vue";
+import { useMobile } from "../composables/useMobile.ts";
 import FormatSelect from "./FormatSelect.vue";
 import HeaderLogo from "./HeaderLogo.vue";
 import SearchBar from "./SearchBar.vue";
 
 const format = ref<string>("");
-const isMobile = useMediaQuery("(max-width: 1219px)");
+const isMobile = useMobile();
 </script>
 
 <template>
@@ -48,8 +48,13 @@ header {
   gap: 5px;
 }
 
-@media (max-width: 1219px) {
+@media (max-width: 1239px) {
+  header {
+    height: 60px;
+  }
+
   .content {
+    height: 60px;
     width: 100%;
     justify-content: center;
   }

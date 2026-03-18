@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useMediaQuery } from "@vueuse/core";
+import { useMobile } from "../composables/useMobile.ts";
 import TitleProperty from "./TitleProperty.vue";
 
 defineProps<{
@@ -14,7 +14,7 @@ defineProps<{
   year?: number;
 }>();
 
-const isMobile = useMediaQuery("(max-width: 1219px)");
+const isMobile = useMobile();
 </script>
 
 <template>

@@ -21,6 +21,6 @@ defineProps<{
 
 <style scoped>
 .title-link-button {
-  width: 154px;
+  width: min(100vw - 240px, 154px);
 }
 </style>

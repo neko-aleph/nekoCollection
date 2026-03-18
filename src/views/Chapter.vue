@@ -9,6 +9,7 @@ import { useManga } from "../composables/useManga.ts";
 import { formatTitle } from "../util/formatTitle.ts";
 
 const route = useRoute();
+
 const pages = useChapter(
   route.params.source as string,
   route.params.chapterId as string,
@@ -74,7 +75,7 @@ const title = useManga(
   overflow-y: scroll;
   width: 650px;
   flex-shrink: 0;
-  height: calc(100vh - 212px);
+  height: calc(100vh - 192px);
   background: var(--bg1);
   background-image: linear-gradient(
     to right,
@@ -103,7 +104,7 @@ const title = useManga(
   gap: 10px;
 }
 
-@media (max-width: 1219px) {
+@media (max-width: 1239px) {
   .content {
     flex-direction: column;
     width: 100vw;
@@ -111,11 +112,12 @@ const title = useManga(
   }
 
   .pages {
-    width: min(calc(100vw - 20px), 400px);
+    width: min(calc(100vw - 40px), 400px);
+    height: calc(100vh - 190px);
   }
 
   .controls {
-    width: min(calc(100vw - 20px), 400px);
+    width: min(calc(100vw - 40px), 400px);
   }
 }
 </style>

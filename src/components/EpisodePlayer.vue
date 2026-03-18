@@ -46,15 +46,15 @@ iframe {
   width: 680px;
 }
 
-@media (max-width: 1219px) {
+@media (max-width: 1239px) {
   .player {
-    width: min(calc(100vw - 20px), 400px);
-    height: min(calc((100vw - 20px) / 9 * 16), 225px);
+    width: min(calc(100vw - 40px), 400px);
+    height: min(calc((100vw - 40px) / 9 * 16), 225px);
   }
 
   iframe {
-    width: min(calc(100vw - 20px), 400px);
-    height: min(calc((100vw - 20px) / 9 * 16), 225px);
+    width: min(calc(100vw - 40px), 400px);
+    height: min(calc((100vw - 40px) / 9 * 16), 225px);
   }
 }
 </style>

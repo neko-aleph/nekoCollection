@@ -64,9 +64,9 @@ defineProps<{
   gap: 0;
 }
 
-@media (max-width: 1219px) {
+@media (max-width: 1239px) {
   .link {
-    min-width: min(calc(100vw - 20px), 400px);
+    min-width: min(calc(100vw - 40px), 400px);
     max-width: 400px !important;
   }
 

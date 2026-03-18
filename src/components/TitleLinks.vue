@@ -65,15 +65,20 @@ h2 {
   right: 0;
 }
 
-@media (max-width: 1219px) {
+@media (max-width: 1239px) {
   .links {
-    width: calc(100vw - 20px);
-    max-width: 400px;
+    width: min(calc(100vw - 40px), 400px);
   }
 
   .list {
     width: 100%;
     max-width: 400px;
+  }
+
+  h2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
   }
 }
 </style>

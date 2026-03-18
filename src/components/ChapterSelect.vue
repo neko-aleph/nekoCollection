@@ -46,13 +46,15 @@ const route = useRoute();
   width: 842px;
   text-align: left;
   padding-left: 10px;
-  padding-right: 20px;
+  padding-right: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-@media (max-width: 1219px) {
+@media (max-width: 1239px) {
   .chapter-button {
-    width: calc(100vw - 20px);
-    max-width: 400px;
+    width: min(calc(100vw - 40px), 400px);
   }
 }
 </style>

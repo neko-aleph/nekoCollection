@@ -42,9 +42,9 @@ const props = defineProps<{
   }
 }
 
-@media (max-width: 1219px) {
+@media (max-width: 1239px) {
   .placeholder {
-    max-width: min(calc(100vw - 20px), 400px);
+    max-width: min(calc(100vw - 40px), 400px);
   }
 }
 </style>

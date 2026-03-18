@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useMediaQuery } from "@vueuse/core";
 import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
 import EpisodePlayer from "../components/EpisodePlayer.vue";
@@ -15,6 +14,7 @@ import TitleLinks from "../components/TitleLinks.vue";
 import TitleProperties from "../components/TitleProperties.vue";
 import TitleTags from "../components/TitleTags.vue";
 import { useAnime } from "../composables/useAnime.ts";
+import { useMobile } from "../composables/useMobile.ts";
 import type { Recommendation, Relation } from "../types/title.ts";
 import { filterTitles } from "../util/filterTitles.ts";
 import { formatDate } from "../util/formatDate.ts";
@@ -25,7 +25,7 @@ const route = useRoute();
 const { data, isFinished } = useAnime(route.params.titleId as string);
 const selectedEpisode = ref(0);
 
-const isMobile = useMediaQuery("(max-width: 1219px)");
+const isMobile = useMobile();
 
 function incrementEpisode() {
   if (selectedEpisode.value < data.value.episodes.length - 1) {
@@ -192,7 +192,7 @@ const filteredRecommendations = computed(() =>
   flex-wrap: wrap;
 }
 
-@media (max-width: 1219px) {
+@media (max-width: 1239px) {
   .content {
     flex-direction: column;
     width: 100vw;
@@ -206,6 +206,7 @@ const filteredRecommendations = computed(() =>
     flex-direction: column;
     align-items: center;
     gap: 0;
+    width: min(calc(100vw - 40px), 400px);
   }
 
   .title-info {
@@ -214,11 +215,11 @@ const filteredRecommendations = computed(() =>
 
   .episode-source {
     position: static;
-    width: min(calc(100vw - 20px), 400px);
+    width: min(calc(100vw - 40px), 400px);
   }
 
   .external-links {
-    width: min(calc(100vw - 20px), 400px);
+    width: min(calc(100vw - 40px), 400px);
     flex-direction: column;
     flex-wrap: nowrap;
   }

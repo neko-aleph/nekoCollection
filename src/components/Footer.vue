@@ -25,9 +25,13 @@ p {
   text-align: center;
 }
 
-@media (max-width: 1219px) {
+@media (max-width: 1239px) {
+  footer {
+    height: 150px;
+  }
+
   p {
-    padding: 0 10px;
+    padding: 0 20px;
   }
 }
 </style>

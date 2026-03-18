@@ -38,6 +38,9 @@ body {
   margin: 0;
 }
 
-.vds-captions {
-  --media-cue-border-radius: 8px !important;
+@media (max-width: 1239px) {
+  body {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }

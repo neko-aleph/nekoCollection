@@ -24,10 +24,9 @@ p {
   -webkit-line-clamp: 7 !important;
 }
 
-@media (max-width: 1219px) {
+@media (max-width: 1239px) {
   p {
-    width: calc(100vw - 20px);
-    max-width: 400px;
+    width: min(calc(100vw - 40px), 400px);
   }
 }
 </style>

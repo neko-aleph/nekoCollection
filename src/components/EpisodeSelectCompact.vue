@@ -20,6 +20,6 @@ defineProps<{
 
 <style scoped>
 .episodes {
-  width: min(calc(100vw - 20px), 400px);
+  width: min(calc(100vw - 40px), 400px);
 }
 </style>
