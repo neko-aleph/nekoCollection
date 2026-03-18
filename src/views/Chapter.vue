@@ -6,9 +6,11 @@ import ChapterSelectCompact from "../components/ChapterSelectCompact.vue";
 import Placeholder from "../components/Placeholder.vue";
 import { useChapter } from "../composables/useChapter.ts";
 import { useManga } from "../composables/useManga.ts";
+import { useMobile } from "../composables/useMobile.ts";
 import { formatTitle } from "../util/formatTitle.ts";
 
 const route = useRoute();
+const isMobile = useMobile();
 
 const pages = useChapter(
   route.params.source as string,
@@ -34,7 +36,7 @@ const title = useManga(
       />
       <div v-else class="chapter-select-placeholder">
         <Placeholder :width="530" :height="32" />
-        <Placeholder :width="69" :height="32" />
+        <Placeholder :width="69" :height="32" v-if="!isMobile" />
       </div>
     </div>
     <div class="column pages">
