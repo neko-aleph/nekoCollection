@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import type { TitleEpisode } from "../types/title.ts";
 import BaseSelect from "./BaseSelect.vue";
 
 const modelValue = defineModel<number>({ default: 0 });
 
 defineProps<{
-  episodes: TitleEpisode[];
+  episodes: number;
 }>();
 </script>
 
@@ -14,7 +13,7 @@ defineProps<{
     class="episodes"
     v-model="modelValue"
     mode="index"
-    :items="episodes.map((_, index) => `Episode ${index + 1}`)"
+    :items="Array.from({ length: episodes }, (_, i) => `Episode ${i + 1}`)"
   />
 </template>
 

@@ -28,7 +28,7 @@ const selectedEpisode = ref(0);
 const isMobile = useMobile();
 
 function incrementEpisode() {
-  if (selectedEpisode.value < data.value.episodes.length - 1) {
+  if (selectedEpisode.value < data.value.currentEpisode - 1) {
     selectedEpisode.value++;
   }
 }
@@ -56,13 +56,13 @@ const filteredRecommendations = computed(() =>
       <div v-if="!isMobile" class="player-layout">
         <EpisodePlayer
           :episode-number="selectedEpisode + 1"
-          :episodes-fetched="data?.episodes?.length"
+          :episodes-fetched="data?.currentEpisode"
           @episode-ended="incrementEpisode"
         />
         <EpisodeSelect
-          v-if="data?.episodes && isFinished"
+          v-if="data?.currentEpisode && isFinished"
           v-model="selectedEpisode"
-          :episodes="data.episodes"
+          :episodes="data.currentEpisode"
         />
         <Placeholder v-else :width="150" :height="384" />
       </div>
@@ -109,13 +109,13 @@ const filteredRecommendations = computed(() =>
       <div v-if="isMobile" class="player-layout">
         <EpisodePlayer
           :episode-number="selectedEpisode + 1"
-          :episodes-fetched="data?.episodes?.length"
+          :episodes-fetched="data?.currentEpisode"
           @episode-ended="incrementEpisode"
         />
         <EpisodeSelectCompact
-          v-if="data?.episodes && isFinished"
+          v-if="data?.currentEpisode && isFinished"
           v-model="selectedEpisode"
-          :episodes="data.episodes"
+          :episodes="data.currentEpisode"
         />
         <Placeholder v-else :width="400" :height="32" />
       </div>

@@ -1,10 +1,8 @@
 <script setup lang="ts">
-import type { TitleEpisode } from "../types/title.ts";
-
 const modelValue = defineModel<number>({ default: 0 });
 
 defineProps<{
-  episodes: TitleEpisode[];
+  episodes: number;
 }>();
 
 function select(id: number) {
@@ -16,7 +14,7 @@ function select(id: number) {
   <div class="episodes">
     <button
       v-for="(episode, index) in episodes"
-      :key="episode.id"
+      :key="episode"
       @click="select(index)"
       :class="['episode', { active: modelValue === index }]"
     >
