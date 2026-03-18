@@ -64,6 +64,15 @@ defineProps<{
   gap: 0;
 }
 
+.title-link-heading {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  white-space: normal;
+  word-break: break-word;
+}
+
 @media (max-width: 1239px) {
   .link {
     min-width: min(calc(100vw - 40px), 400px);
