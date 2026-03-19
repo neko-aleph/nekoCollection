@@ -28,6 +28,7 @@ const route = useRoute();
   text-decoration: none;
   transition: text-decoration-color 0.2s ease;
   align-items: center;
+  color: var(--fg0);
 }
 
 .material-symbols-outlined {
