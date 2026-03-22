@@ -8,3 +8,9 @@ defineProps<{
 <template>
   <img :src="`${proxy}${src}`" />
 </template>
+
+<style scoped>
+img {
+  user-select: none;
+}
+</style>

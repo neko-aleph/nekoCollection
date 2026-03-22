@@ -27,6 +27,7 @@ img {
   height: 32px;
   width: 32px;
   border-radius: 4px;
+  user-select: none;
 }
 
 span {
