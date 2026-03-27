@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { onKeyStroke, useScroll } from "@vueuse/core";
+import { useTemplateRef } from "vue";
 import { useRoute } from "vue-router";
 import BackButton from "../components/BackButton.vue";
 import ChapterPage from "../components/ChapterPage.vue";
@@ -20,6 +22,19 @@ const title = useManga(
   route.params.titleId as string,
   route.params.source as string,
 );
+
+const pagesContainer = useTemplateRef("pagesContainer");
+const { y } = useScroll(pagesContainer, { behavior: "smooth" });
+
+onKeyStroke("ArrowDown", (e) => {
+  e.preventDefault();
+  y.value += 50;
+});
+
+onKeyStroke("ArrowUp", (e) => {
+  e.preventDefault();
+  y.value -= 50;
+});
 </script>
 
 <template>
@@ -39,7 +54,7 @@ const title = useManga(
         <Placeholder :width="69" :height="32" v-if="!isMobile" />
       </div>
     </div>
-    <div class="column pages">
+    <div ref="pagesContainer" class="column pages">
       <ChapterPage
         v-if="pages.data.value && pages.isFinished.value"
         v-for="page in pages.data.value"
