@@ -31,6 +31,9 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  position: sticky;
+  top: 0;
+  background: var(--bg0);
 }
 
 .content {
