@@ -10,6 +10,7 @@
   --bd0: #bfbfbf;
   --fg0: #262626;
   --wv0: #f0f0f0;
+  --bg0-ee: #f0f0f0ee;
 
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -27,6 +28,7 @@
     --bd0: #4c4c4c;
     --fg0: #e7e7e7;
     --wv0: #393939;
+    --bg0-ee: #191919ee;
   }
 }
 

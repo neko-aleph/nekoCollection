@@ -33,7 +33,8 @@ header {
   justify-content: center;
   position: sticky;
   top: 0;
-  background: var(--bg0);
+  background: var(--bg0-ee);
+  backdrop-filter: blur(16px);
   z-index: 1;
 }
 
