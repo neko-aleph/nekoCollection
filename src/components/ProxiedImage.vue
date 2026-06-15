@@ -28,7 +28,7 @@ const encodeUrl = computed(() => {
 </script>
 
 <template>
-  <img :src="`${proxy}/${encodeUrl}`" />
+  <img :src="encodeUrl" />
 </template>
 
 <style scoped>
