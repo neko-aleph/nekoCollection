@@ -6,6 +6,7 @@ const proxy = import.meta.env.VITE_CORS_PROXY_URL;
 const props = defineProps<{
   src: string;
   referer?: string;
+  loading?: string;
 }>();
 
 const encodeUrl = computed(() => {
@@ -28,7 +29,7 @@ const encodeUrl = computed(() => {
 </script>
 
 <template>
-  <img :src="encodeUrl" />
+  <img :src="encodeUrl" :loading="loading" />
 </template>
 
 <style scoped>

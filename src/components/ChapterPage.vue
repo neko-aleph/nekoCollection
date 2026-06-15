@@ -11,6 +11,7 @@ defineProps<{
   <ProxiedImage
     :src="image"
     :referer="referer"
+    loading="lazy"
     class="page"
   />
 </template>
