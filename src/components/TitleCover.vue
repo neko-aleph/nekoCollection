@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import ProxiedImage from "./ProxiedImage.vue";
 
-const proxy = import.meta.env.VITE_OTHER_CORS_PROXY_URL;
-
 defineProps<{
   image: string;
   size: string;
@@ -10,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-  <ProxiedImage :src="image" :proxy="proxy" :class="[`cover`, size]" />
+  <ProxiedImage :src="image" :class="[`cover`, size]" />
 </template>
 
 <style scoped>
