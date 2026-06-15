@@ -102,7 +102,7 @@ const filteredRecommendations = computed(() =>
       <SourceSelectButtons
         v-if="data && isFinished"
         format="anime"
-        :sources="['HD-1', 'HD-2']"
+        :sources="['HD-1', 'HD-2', 'HD-3c']"
         class="episode-source"
       />
       <Placeholder v-else :width="177" :height="53" />

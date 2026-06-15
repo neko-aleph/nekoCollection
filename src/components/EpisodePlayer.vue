@@ -11,12 +11,15 @@ const props = defineProps<{
 const emit = defineEmits(["episodeEnded"]);
 const route = useRoute();
 const iframeUrl = import.meta.env.VITE_EMBED_PLAYER_URL;
+const otherIframeUrl = import.meta.env.VITE_OTHER_EMBED_PLAYER_URL;
 
 const src = computed(() => {
   if (route.params.source === "hd-1") {
-    return `${iframeUrl}/animepahe/${route.params.titleId}/${props.episodeNumber}/sub`;
-  } else {
+    return `${otherIframeUrl}/${route.params.titleId}/${props.episodeNumber}/sub`
+  } else if (route.params.source === "hd-2") {
     return `${iframeUrl}/anime/${route.params.titleId}/${props.episodeNumber}/sub`;
+  } else if (route.params.source === "hd-3") {
+    return `${iframeUrl}/animepahe/${route.params.titleId}/${props.episodeNumber}/sub`;
   }
 });
 </script>
