@@ -6,8 +6,6 @@ nekoCollection is a simple web app that lets you browse anime and manga using da
 
 👉 [Try it out](https://collection.kuro-neko.dev)
 
----
-
 ## 📦 Setup
 
 ### 1. Clone
