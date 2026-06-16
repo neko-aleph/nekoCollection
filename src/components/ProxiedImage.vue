@@ -6,7 +6,7 @@ const proxy = import.meta.env.VITE_CORS_PROXY_URL;
 const props = defineProps<{
   src: string;
   referer?: string;
-  loading?: string;
+  loading?: 'eager' | 'lazy' | undefined;
 }>();
 
 const encodeUrl = computed(() => {
