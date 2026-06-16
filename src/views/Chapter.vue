@@ -106,6 +106,12 @@ onKeyStroke("ArrowUp", (e) => {
   animation: shimmer 0.75s infinite linear;
 }
 
+.pages:has(.page) {
+  background: var(--bg1);
+  background-image: none !important;
+  animation: none !important;
+}
+
 @keyframes shimmer {
   0% {
     background-position: 200% 0;
