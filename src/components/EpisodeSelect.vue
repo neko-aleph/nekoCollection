@@ -54,6 +54,7 @@ function select(id: number) {
 
 .episode:hover {
   background: var(--bg1);
+  cursor: pointer;
 }
 
 .active {

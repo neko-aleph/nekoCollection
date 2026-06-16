@@ -19,6 +19,7 @@
 
 .base-button:hover {
   background: var(--bg1);
+  cursor: pointer;
 }
 
 .base-button:active {
