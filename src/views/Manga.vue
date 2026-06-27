@@ -78,7 +78,7 @@ const filteredRecommendations = computed(() =>
       <div v-if="data?.chapters?.length && isFinished" class="chapters">
         <ChapterSelect :chapters="data.chapters" />
       </div>
-      <Empty v-else-if="data?.chapters && isFinished" />
+      <Empty v-else-if="data?.chapters && isFinished" :height="32" />
       <Placeholder v-else :width="842" :height="32" />
     </div>
     <div class="column" v-if="data && isFinished">

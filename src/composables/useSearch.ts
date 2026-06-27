@@ -35,5 +35,6 @@ export function useSearch(query: string, isManga: boolean) {
   return {
     titles,
     loadMore,
+    isFetching
   };
 }
